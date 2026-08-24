@@ -725,11 +725,23 @@ function App() {
               ) : (
                 <div className="record-list">
                   {observations.slice(0, 3).map((observation) => (
-                    <ObservationCard
+                    <button
                       key={observation.id}
-                      observation={observation}
-                      compact
-                    />
+                      type="button"
+                      onClick={() => setActiveTab('observations')}
+                      style={{
+                        border: 0,
+                        background: 'transparent',
+                        padding: 0,
+                        textAlign: 'left',
+                        width: '100%',
+                      }}
+                    >
+                      <ObservationCard
+                        observation={observation}
+                        compact
+                      />
+                    </button>
                   ))}
                 </div>
               )}
