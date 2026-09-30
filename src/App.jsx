@@ -17,6 +17,11 @@ const SPECIES_OPTIONS = [
   'Groundhog',
   'Porcupine',
   'Wild Turkey',
+  'Domestic Cat',
+  'Eastern Fox Squirrel',
+  'Black Bear',
+  'Spotted Skunk',
+  'Bird',
   'Other',
   'Unknown',
 ]
@@ -781,7 +786,7 @@ function App() {
               <label>
                 Exact Time *
                 <input
-                  type="time"
+                  type="text"
                   value={observationForm.observation_time}
                   onChange={(event) =>
                     setObservationForm({
